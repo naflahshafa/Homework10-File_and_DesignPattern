@@ -21,12 +21,8 @@ class movieRepository {
         return movieModel.updateMovie({title, genres, year, photo, id});
     }
 
-    async updatePhotoMovie ({photopath, id}) {
-        return movieModel.updatePhotoMovie({photopath, id});
-    }
-
-    async getPhotoPath (id) {
-        return movieModel.getPhotoMovie(id);
+    async updatePhotoMovie ({photo, id}) {
+        return movieModel.updatePhotoMovie({photo, id});
     }
 };
 
