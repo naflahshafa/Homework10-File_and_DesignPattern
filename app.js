@@ -28,6 +28,8 @@ app.set('view engine', 'ejs');
 // Menentukan direktori tata letak (views)
 app.set('views', path.join(__dirname, 'views'));
 
+app.use('/upload', express.static(path.join(__dirname, 'upload')));
+
 app.get('/', (req, res) => {
     res.json({message: 'Hello from API'})
 })
@@ -68,7 +70,6 @@ pool.connect((err, res) => {
 
 
 
-app.use('/upload', express.static(path.join(__dirname, 'upload')));
 
 // const diskStorage = multer.diskStorage({
 //     destination: (req, file, cb) => {
